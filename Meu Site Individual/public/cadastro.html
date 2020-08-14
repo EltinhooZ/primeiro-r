@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d91b749ddb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="CSS/form-style.css">
+    <title>Cadastre-se</title>
+</head>
+
+<body>
+    <div class="home">
+        <a class="fas fa-home fa-3x home" href="Home.html"></a>
+    </div>
+
+    <div class="main-contato">
+        <h1>Cadastre-se</h1>
+        <p class="p2">Receba noticias sobre a cena do rap nacional, novos albúns, músicas etc..</p>
+
+        <form>
+            <ul id="MensagemErro">
+            </ul>
+            <label for="nomesobrenome"> Nome e Sobrenome:</label>
+            <input type="text" id="nomesobrenome" class="input-padrao">
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" placeholder="seuemail@dominio.com" class="input-padrao">
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" placeholder="Digite sua senha" class="input-padrao">
+
+            <label for="Confirmar">Confirme sua Senha:</label>
+            <input type="password" id="ConfirmaSenha" placeholder="Confirme sua senha" class="input-padrao">
+
+
+        </form>
+        <button onclick="enviaContato()" class="input-padrao botão">Enviar</button>
+
+    </div>
+
+
+
+
+</body>
+
+</html>
+<script>
+    function enviaContato() {
+        var erros = validaContato();
+        MensagemErro.innerHTML = '';
+        if (erros.length > 0) {
+            for (var a = 0; a < erros.length; a++) {
+                var erro = erros[a];
+                var li = document.createElement("li");
+                li.innerHTML = erro;
+
+                MensagemErro.appendChild(li);
+            }
+        } else {
+            MensagemErro.innerHTML = '<b style="background-color: green;color: black;padding: 10px;border-radius: 5px;">Parabéns, Você está cadastrado !</b>';
+        }
+
+
+
+    }
+
+    function validaContato() {
+        var erros = [];
+
+        if (!nomesobrenome.value) {
+            erros.push("Preencha o nome");
+        }
+
+        if ((email.value.search("@") == -1) ||
+            (email.value.search(".") == -1) ||
+            (email.value.search(" ") >= 1)) {
+            erros.push("O formato de email é: usuario@dominio.com")
+        }
+
+        if (!senha.value) {
+            erros.push("Insira uma senha");
+        }
+
+        if (senha.value != ConfirmaSenha.value) {
+            erros.push("Senhas distintas!");
+        }
+
+        return erros;
+    }
+</script>

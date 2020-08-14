@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJONGA</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/backgrounds.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noticia+Text&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/load1.css">
+    <script src="https://kit.fontawesome.com/d91b749ddb.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="funcoes.js"></script>
+    <script type="text/javascript" src="scripts.js"></script>
+</head>
+
+<body onload="teste()">
+    <!-- Carregamento da página -->
+    <center>
+        <div class="carregamento" id="loading" style="display: block">
+            <img src="https://media.giphy.com/media/nAWfkuQmFvVy8/giphy.gif" style="width:370px;height:450px;" />
+        </div>
+    </center>
+
+    <!-- Header -->
+    <div id="conteudo" style="display: none;">
+        <div class="container">
+
+            <h1>DJONGA</h1>
+
+            <a class="fas fa-bars fa-3x bars" onclick="OpenNav()"></a>
+            <a class="fas fa-home fa-3x home" href="Home.html"></a>
+
+        </div>
+
+        <!-- Barra de navegação -->
+        <div class="sidebar" id="mysidebar">
+            <span class="far fa-times-circle fa-2x close" onclick="CloseNav()"></span>
+            <div>
+                <a href="javascript: abrir();">Login</a>
+                <a href="cadastro.html">Cadastro</a>
+            </div>
+        </div>
+
+        <!-- Login  -->
+        <div id="login" class="popup">
+
+            <span class="far fa-times-circle fa-2x close2" onclick="Close()"></span>
+
+
+            <form id="form_login" method="POST" onsubmit="return entrar()">
+                <h1>Entre na Página</h1>
+
+                <label for="email">E-mail</label>
+                <input type="email" name="email" placeholder="seuemail@dominio.com" class="input-padrao"><br>
+
+                <label for="password">Senha</label>
+                <input type="password" name="senha" class="input-padrao">
+
+                <button id="btn_entrar" class="botão">Entrar</button>
+            </form>
+
+
+            <div id="div_erro" style="background-color: sandybrown; color: rgb(255, 0, 0); display: none;">
+
+            </div>
+
+        </div>
+
+        <!-- Página principal rapper -->
+        <div class="main" id="main">
+
+            <!-- Usuario logado -->
+            <div class="UsuarioLogado" id="logando" style="display: none;">
+                <span> Bem vindo, </span> <b id="b_usuario"></b>
+                <a href="#" onclick="logoff()" style="color:white;" class="fas fa-sign-out-alt"> Sair</a>
+            </div>
+
+            <!-- Notificação Usuario Já está logado -->
+
+            <div class="notificacao-logado" id="notificacao-logado">
+                <div id="notificacao">
+                    <p>Você ja está logado<br>Nessa página!</p>
+                    <div id="notificacao-icon">
+                        <i class="fas fa-exclamation-circle fa-3x"></i>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="Box1">
+                <h1 class="assunto">Biografia</h1>
+                <p class="baixo font">
+                    <b>Gustavo Pereira Marques (4 de junho de 1994), mais conhecido como Djonga, é um dos destaques da talentosa nova geração de rappers mineiros. Influenciado pelo funk e pelos Racionais MC’s, Gustavin, como também é chamado, começou sua carreira em saraus de poesia, lançando seu primeiro trabalho, o EP Fechando o Corpo, no ano de 2015.
+                    <br>
+                        Foi convidado por Hot para integrar o time de estrelas do DV Tribo e em pouco tempo ganhou os holofotes do rap nacional, chamando atenção pela combinação da voz grave com uma entrega agressiva, típica do funk dos anos 2000, e pelas rimas bem construídas — esbanjado trocadilhos, linhas bem humoradas e fortes críticas sociais nas letras.
+                    <br>    
+                        Após participar de vários projetos de destaque e lançar singles muito bem recebidos, Djonga lançou Heresia, seu álbum de estreia, no início de 2017. Feito no período de 2 meses, a obra dividiu bastante a crítica especializada do rap nacional, mas ganhou a boca e os corações dos ouvintes, consolidando o MC na cena e abrindo caminho para o aclamado O Menino que Queria Ser Deus, seu segundo álbum, lançado um ano depois.
+                    <br>    
+                        Produzido quase totalmente por Coyote, companheiro de Djonga no DV Tribo e no Coletivo GE, OMQQSD(O menino Que Queria Ser Deus) apresentou um artista mais maduro e versátil, variando nas técnicas vocais, interpretações e estruturas das rimas, mas sem deixar de lado a irreverência e a personalidade que fizeram de Djonga um dos nomes mais respeitados da nova geração do rap nacional.</b></p>
+            </div>
+
+            <div class="BoxDjonga">
+
+                <img src="img/djonga.png">
+
+            </div>
+
+            <div class="BoxMc4">
+            </div>
+
+            <!-- Player Sound cloud -->
+            <iframe class="player" width="20%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/307222724&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+            <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/fenrir_png" title="Fenrir" target="_blank" style="color: #cccccc; text-decoration: none;">Fenrir</a> · <a href="https://soundcloud.com/fenrir_png/sets/heresia-djonga" title="&quot;Heresia&quot; -Djonga" target="_blank"
+                    style="color: #cccccc; text-decoration: none;">&quot;Heresia&quot; -Djonga</a></div>
+
+            <div class="Box4">
+                <h1 class="assunto title">Um dos 3 melhores albúns de 2017</h1>
+                <h2 class="assunto title">Heresia</h2>
+
+                <p class="font">
+                    Você não precisa ir além de Corre das Notas, faixa de abertura de Heresia (2017), para ser prontamente arrastado para dentro do primeiro álbum de estúdio do mineiro Djonga. “Pista salgada como água do mar / Chamem o bombeiro / A maioria não sabe nadar
+                    / Apesar de ser egoísta / E não transformar nada em vinho / Eu sou profeta e como / Cristo me coroaram com espinhos“, rima enquanto prepara o terreno para o restante da obra. São versos perfumados pelo aroma da morte, conflitos existencialistas
+                    e instantes de profunda inquietação. Um turbulento exercício criativo que ganha ainda mais desataque em músicas como Esquimó (“Tem quem tem problema abstrato / Quem zera o extrato / Tem quem não sabe mais, com o que gastar o extrato
+                    / Tão pra rescindir seu contrato, tipo, fala como um papagaio / Só que age como um rato, minha rima é o gato“), mas que orienta de maneira insana a experiência do ouvinte até a derradeira O Mundo É Nosso, bem-sucedida colaboração com
+                    o rapper carioca BK.
+                    <br> Ponto de partida para uma sequência de grandes obras lançadas por novos representantes da cena mineira, Heresia, como o próprio título indica, encontra na perversão de velhos conceitos a base para grande parte das faixas. Canções
+                    que passeiam por temas como religião, sexo, criminalidade e racismo de forma sempre provocativa, crua, conceito que seria reforçado de maneira ainda mais explícita no álbum seguinte, o também político O Menino Que Queria Ser Deus (2018).
+                    Da imagem de capa do disco, uma releitura do clássico Clube da Esquina (1972), de Milton Nascimento, passando pela composição dos versos, cada fragmento do álbum reflete a força e identidade criativa de Djonga, indicativo de tudo aquilo
+                    que seria entregue pelo artista mineiro nos próximos anos.
+                </p>
+
+                <h1 class="assunto title">"Porque o menino queria ser deus"</h1>
+                <h2 class="assunto title">O Menino que queria Ser Deus(2018)</h2>
+
+                <p class="font">Djonga é um reflexo daquilo que sustenta nos próprios versos: “Eu sou daqueles que dá o papo reto e vive torto“. Um personagem errático em um cenário consumido pelo caos urbano, racismo, conflitos diários e a busca declarada pela sobrevivência.
+                    O Menino que Queria Ser Deus, como escancara de maneira explícita no título do segundo álbum de estúdio da carreira. Poemas angustiados, letras introspectivas e pequenas reflexões que nascem como complemento ao material entregue pelo
+                    rapper durante a produção do introdutório Heresia (2017). Um misto de ruptura e avanço em relação ao disco que o antecede, como um esforço involuntário do artista em ampliar os domínios da própria obra. “Acho que a grande questão do
+                    disco é o amadurecimento“, resumiu em entrevista à ONErpm.
+                    <br> De fato, tão logo tem início, em Atípico, até alcançar a derradeira Eterno, cada fragmento do disco reflete a capacidade do artista em transitar por diferentes campos da música e temáticas de forma sempre impactante. Canções que
+                    vão da forte religiosidade, como em De Lá (“Monta no cavalo, lança no dragão“), às relações familiares, em Canção Pro Meu Filho (“Meu pequeno Ogum / Me ensina a batalhar / A vitória do seu lado é uma escolha“), porém, sempre preservado
+                    a rima crua do rapper mineiro. Exemplo disso está em faixas como Junho de 94, Estouro, Corra e todo o fino repertório que serve de sustento ao álbum. Um misto de dor e celebração, angústia e serenidade, dualidade que embala de forma
+                    turbulenta a experiência do ouvinte até o último instante da obra.</p>
+                <p class="font"><b>O rapper ainda conta com mais dois albúns seguidos desse: Ladrão(2019) e Historias Da Minha Área(2020)
+                        Observação: Todos os albúns foram lançados no dia 13/março, por ter uma data especial quando lançou HERESIA !
+                    </b></p>
+
+
+
+
+            </div>
+        </div>
+
+        <div class="footer" id="redesSociais">
+            <p>Feito por alguém que curte ama rap</p>
+            <div class="social">
+                <a class="fab fa-facebook fa-2x" href="https://www.facebook.com/eltinhooz.silva10/" target="_blank"></a>
+                <a class="fab fa-instagram fa-2x" href="https://www.instagram.com/eltinhooz/" target="_blank"></a>
+                <a class="fab fa-linkedin fa-2x" href="https://www.linkedin.com/in/elton-silva-25b32a1b0/" target="_blank"></a>
+            </div>
+
+
+        </div>
+
+
+    </div>
+</body>
+
+</html>
+<script type="text/javascript">
+    function entrar() {
+        aguardar();
+        var formulario = new URLSearchParams(new FormData(form_login));
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            body: formulario
+        }).then(resposta => {
+
+            if (resposta.ok) {
+                resposta.json().then(json => {
+
+                    // sessionStorage.login_usuario_meuapp = json.Email;
+                    localStorage.setItem('login', json.Email);
+
+                    if (localStorage.length > 0) {
+                        window.location.href = 'Djonga.html';
+
+                    }
+
+                });
+
+
+
+            } else {
+
+                console.log('Erro de login!');
+
+                finalizar_aguardar();
+            };
+        });
+        // verificar_autenticacao();
+        return false;
+
+    }
+</script>

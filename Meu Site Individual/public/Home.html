@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/d91b749ddb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/load1.css">
+</head>
+
+<body>
+    <center>
+        <div class="carregamento" id="loading" style="display: block">
+            <img src="https://media.giphy.com/media/nAWfkuQmFvVy8/giphy.gif" style="width:370px;height:450px;" />
+        </div>
+    </center>
+    <div id="conteudo" style="display: none;">
+        <Div class="slide">
+            <div class="load">
+
+            </div>
+            <div class="content">
+                <div class="social">
+                    <h2>Sigam nas Redes Sociais</h2>
+                    <a class="fab fa-facebook fa-2x" href="https://www.facebook.com/eltinhooz.silva10/" target="_blank"></a>
+                    <a class="fab fa-instagram fa-2x" href="https://www.instagram.com/eltinhooz/" target="_blank"></a>
+                    <a class="fab fa-linkedin fa-2x" href="https://www.linkedin.com/in/elton-silva-25b32a1b0/" target="_blank"></a>
+                </div>
+                <div class="principal">
+                    <h1>Guia de Rappers Nacionais</h1>
+
+                    <ul class="links">
+                        <a href="BK-Abebe.html">BK'</a>
+                        <a href="sabotage.html">Sabotage</a>
+                        <a href="racionais.html">Racionais</a>
+                        <a href="Djonga.html">Djonga</a>
+                    </ul>
+
+
+                </div>
+                <iframe class="video" width="460" height="315" src="https://www.youtube.com/embed/videoseries?list=PLZrg65KsLYtY43Kcc3lB8bdPg2b9JerAI" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+        </Div>
+    </div>
+
+    <script>
+        var i = setInterval(function() {
+
+            clearInterval(i);
+
+            // O código desejado é apenas isto:
+            document.getElementById("loading").style.display = "none";
+            document.getElementById("conteudo").style.display = "inline";
+        }, 2000);
+    </script>
+</body>
+
+</html>

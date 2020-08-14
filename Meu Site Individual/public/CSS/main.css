@@ -1,0 +1,375 @@
+@charset "UTF-8";
+@font-face {
+    font-family: MARSNEVENEKSK-clean;
+    src: url('../CSS/fonts/MARSNEVENEKSK-Clean.otf');
+}
+
+@font-face {
+    font-family: Ghoust;
+    src: url('Ghoust\ Outline.otf');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Roboto+Slab&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/grafite3.png');
+}
+
+
+/* Página dos rappers */
+
+.container {
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    position: fixed;
+}
+
+.container h1 {
+    color: #a37b44;
+    text-align: center;
+    font-size: 32px;
+    font-family: 'Bungee', cursive;
+    text-shadow: -1px 0 white, 0 2px white, 2px 0 white, 0 -1px white;
+}
+
+.bars {
+    color: white;
+    cursor: pointer;
+    border: none;
+    margin-left: 20px;
+    margin-top: -68px;
+    position: absolute;
+}
+
+.sidebar {
+    height: 100vh;
+    width: 0px;
+    background-color: gray;
+    position: fixed;
+    float: right;
+    overflow: hidden;
+    transition: 0.5s;
+    background-image: url('../img/fundo.png');
+}
+
+.sidebar a {
+    color: rgb(0, 0, 0);
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.sidebar div {
+    margin-top: 80px;
+}
+
+.sidebar span {
+    margin-top: 20px;
+}
+
+.sidebar a:link {
+    background: rgb(168, 168, 168);
+    font-size: 20px;
+    color: #FFF;
+    text-decoration: none;
+    font-weight: bold;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.sidebar a:hover {
+    background: #B1B1B1;
+    color: #FFF;
+    font-weight: bold;
+    border-color: #B1B1B1;
+}
+
+.close {
+    color: white;
+    cursor: pointer;
+    margin-left: 75%;
+    width: 30px;
+}
+
+.close:hover {
+    position: relative;
+    bottom: 2px;
+}
+
+
+/* Conteúdo da página */
+
+.main {
+    width: 85%;
+    height: 90%;
+    padding: 30px;
+    padding-bottom: 80px;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+    transition: 0.5s;
+    background-color: white;
+}
+
+.home {
+    color: rgb(255, 255, 255);
+    margin-left: 95%;
+    top: 20px;
+    float: right;
+    position: absolute;
+    border: none;
+    text-decoration: none;
+}
+
+.Box1 {
+    width: 35%;
+    height: 53%;
+    margin-left: 15%;
+    margin-top: 8%;
+    float: left;
+    background-color: white;
+    border-bottom: black 5px solid;
+}
+
+.Box1 h1 {
+    color: #a37b44;
+    font-family: MARSNEVENEKSK-clean;
+    font-size: 45px;
+    letter-spacing: 2px;
+    text-shadow: -1px 0 black, 0 5px black, 5px 0 black, 0 -1px black;
+}
+
+.destaque {
+    color: black;
+}
+
+.Box2 img {
+    width: 470px;
+    height: 350px;
+    margin-top: 16%;
+    border-radius: 150px;
+    margin-left: 240px;
+}
+
+.Box4 {
+    width: 78%;
+    margin-top: 1%;
+    padding-bottom: 20px;
+    text-align: center;
+    border: 2px black solid;
+}
+
+.assunto {
+    text-align: center;
+}
+
+.baixo {
+    text-align: justify;
+    margin-top: 50px;
+}
+
+.font {
+    font-size: 15.5px;
+    font-family: 'Noticia Text', serif;
+    font-weight: bold;
+}
+
+.title {
+    font-family: 'Anton', sans-serif;
+    font-weight: bold;
+    color: #503004;
+}
+
+.player {
+    float: right;
+    margin-top: 2%;
+}
+
+.footer {
+    width: 100%;
+    height: 80px;
+    color: white;
+    background-color: black;
+}
+
+.footer p {
+    font-size: 20px;
+    width: 150px;
+    height: 30px;
+    margin-left: 900px;
+    float: left;
+    text-align: justify;
+}
+
+.fab {
+    margin-right: 20px;
+    color: gray;
+    text-decoration: none;
+}
+
+.social {
+    margin-top: 40px;
+    width: 240px;
+    float: right;
+}
+
+.social a:hover {
+    background: #B1B1B1;
+    color: #FFF;
+    font-weight: bold;
+    border-color: #B1B1B1;
+}
+
+.social a:link {
+    cursor: pointer;
+}
+
+
+/* Login */
+
+.popup {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 400px;
+    height: 380px;
+    padding: 15px;
+    border: 1px black solid;
+    background-image: url('../img/fundo2.png');
+    background-position: center;
+    display: none;
+}
+
+.popup label {
+    float: left;
+    font-size: 22px;
+    margin-top: 40px;
+    margin-left: 25px;
+    color: #a37b44;
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: bold;
+    text-shadow: -1px 0 black, 0 3px black, 3px 0 black, 0 -1px black;
+    background-color: rgb(150, 150, 150);
+}
+
+.popup h1 {
+    width: 250px;
+    margin-left: 95px;
+    margin-top: 70px;
+    color: #c4914a;
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: bold;
+    background-color: rgb(150, 150, 150);
+    text-shadow: -2px 0 black, 0 5px black, 5px 0 black, 0 -2px black;
+}
+
+.close2 {
+    color: white;
+    cursor: pointer;
+    float: right;
+    width: 30px;
+}
+
+.close2:hover {
+    position: relative;
+    bottom: 2px;
+}
+
+.input-padrao {
+    margin-top: 30px;
+    margin-right: 52px;
+    display: block;
+    float: right;
+    border-radius: 2px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+.botão {
+    width: 100px;
+    padding: 12px;
+    background-color: rgb(128, 115, 0);
+    color: #000000;
+    text-transform: uppercase;
+    border: none;
+    font-weight: bold;
+    margin-left: 40%;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.botão:hover {
+    position: relative;
+    bottom: 3px;
+}
+
+.UsuarioLogado {
+    width: 400px;
+    margin-top: 45px;
+    background-color: black;
+    color: #a37b44;
+    position: fixed;
+    padding-left: 10px;
+    margin-left: 552px;
+}
+
+.UsuarioLogado a {
+    text-decoration: none;
+    float: right;
+    padding-left: 10px;
+    margin-top: 3px;
+}
+
+.UsuarioLogado span {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#b_usuario {
+    margin-left: 15px;
+    font-size: 17px;
+}
+
+
+/* Notificação de Usuario ja está logado */
+
+.notificacao-logado {
+    display: none;
+}
+
+.notificacao-logado:hover {
+    position: absolute;
+    margin-top: 5px;
+}
+
+#notificacao {
+    width: 285px;
+    height: 90px;
+    margin-top: 100px;
+    right: 100px;
+    border-radius: 5px;
+    box-shadow: 8px 8px 15px black;
+    position: fixed;
+    background-color: rgb(168, 168, 168);
+}
+
+#notificacao p {
+    font-weight: bold;
+    font-family: ghoust;
+    letter-spacing: 2px;
+    float: right;
+    margin-right: 15px;
+    margin-top: 25px;
+}
+
+#notificacao-icon {
+    width: 50px;
+    padding: 21px;
+    border-radius: 5px;
+    background-color: #a37b44;
+}

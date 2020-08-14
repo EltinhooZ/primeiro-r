@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/backgrounds.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noticia+Text&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/load1.css">
+    <link href="sabotage.html">
+    <script src="https://kit.fontawesome.com/d91b749ddb.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="funcoes.js"></script>
+    <script type="text/javascript" src="scripts.js"></script>
+</head>
+
+<body onload="teste()">
+    <center>
+        <div class="carregamento" id="loading" style="display: block">
+            <img src="https://media.giphy.com/media/nAWfkuQmFvVy8/giphy.gif" style="width:370px;height:450px;" />
+        </div>
+    </center>
+
+    <div id="conteudo" style="display: none;">
+        <div class="container">
+
+            <h1>SABOTAGE</h1>
+
+            <a class="fas fa-bars fa-3x bars" onclick="OpenNav()"></a>
+            <a class="fas fa-home fa-3x home" href="Home.html"></a>
+
+        </div>
+
+
+        <!-- Barra de navegação -->
+        <div class="sidebar" id="mysidebar">
+            <span class="far fa-times-circle fa-2x close" onclick="CloseNav()"></span>
+            <div>
+                <a href="javascript: abrir();">Login</a>
+                <a href="cadastro.html">Cadastro</a>
+            </div>
+        </div>
+
+        <!-- Login  -->
+        <div id="login" class="popup">
+
+            <span class="far fa-times-circle fa-2x close2" onclick="Close()"></span>
+
+
+            <form id="form_login" method="POST" onsubmit="return entrar()">
+                <h1>Entre na Página</h1>
+
+                <label for="email">E-mail</label>
+                <input type="email" name="email" placeholder="seuemail@dominio.com" class="input-padrao"><br>
+
+                <label for="password">Senha</label>
+                <input type="password" name="senha" class="input-padrao">
+
+                <button id="btn_entrar" class="botão">Entrar</button>
+            </form>
+
+
+            <div id="div_erro" style="background-color: sandybrown; color: rgb(255, 0, 0); display: none;">
+
+            </div>
+
+        </div>
+
+        <!-- Página principal do rapper -->
+        <div class="main" id="main">
+
+            <!-- Usuario logado -->
+            <div class="UsuarioLogado" id="logando" style="display: none;">
+                <span> Bem vindo, </span> <b id="b_usuario"></b>
+                <a href="#" onclick="logoff()" style="color:white;" class="fas fa-sign-out-alt"> Sair</a>
+            </div>
+
+            <!-- Notificação Usuario Já está logado -->
+
+            <div class="notificacao-logado" id="notificacao-logado">
+                <div id="notificacao">
+                    <p>Você ja está logado<br>Nessa página!
+                    </p>
+                    <div id="notificacao-icon">
+                        <i class="fas fa-exclamation-circle fa-3x"></i>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="Box1">
+                <h1 class="assunto">Biografia</h1>
+                <p class="baixo font">
+                    Mauro Mateus dos Santos (3 de abril de 1973 — 24 de janeiro de 2003), mais conhecido pelo seu nome artístico Sabotage, foi um compositor, rapper e ator brasileiro. A origem do apelido deu-se por estar sempre conseguindo burlar as leis com tremendo êxito,
+                    como entrar em bailes, festas e boates sem ter permissão, saindo ileso de inúmeras confusões.<br> Pai de três filhos, um deles fruto de uma relação extra-conjugal, morreu com três tiros pelas costas. Nunca escondeu
+                    de ninguém seu passado de traficante; seu assassinato teve a ver com essa vida.<br> Participou de premiados filmes, como O Invasor (Beto Brant, 2002)—produzindo a trilha sonora—, com Paulo Miklos, e Carandiru (Hector Babenco, 2003).<br>                    É considerado por muitos um dos maiores rappers brasileiros de todos os tempos, por ser extremamente técnico e ter flow e lirismo impecáveis, muito à frente de seu tempo.<br> Seu único álbum em vida, Rap é Compromisso, lançado em 2001
+                    sob o selo Cosa Nostra, dos Racionais MC’s, foi extremamente aclamado e é considerado um dos melhores álbuns da história do rap nacional. Um verdadeiro clássico instantâneo.<br> Foi membro do lendário grupo RZO, ao lado de Helião,
+                    Sandrão, Negra Li, Negro Útil, DJ Cia, Rappin' Hood e DBS, participando de vários sons do coletivo.</b>
+                </p>
+            </div>
+
+            <div class="BoxSabotag">
+
+                <img src="img/sabotage.png">
+
+            </div>
+
+            <div class="BoxMc2">
+            </div>
+
+            <!-- Player Sound cloud -->
+            <iframe class="player" width="20%%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1017639592&color=%23211d1f&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+
+            <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/abebenectar" title="BK&#x27;" target="_blank" style="color: #cccccc; text-decoration: none;">BK&#x27;</a></div>
+
+            <div class="Box4">
+                <h1 class="assunto title">O Clássico instantâneo</h1>
+                <h2 class="assunto title">O rap é compromisso(2001)</h2>
+
+                <p class="font">“A minha carreira não teria sido a mesma sem o trabalho em parceria com Sabotage. Foi uma oportunidade única de participar de um disco que fez história”, disse o produtor Tejo Damasceno, em 2014, à revista 'Rolling Stone', à época do relançamento
+                    do álbum Rap é Compromisso! - único disco cheio lançado por Sabotage (1973-2003) ainda em vida. Pode ser estranho, mas esse icônico trabalho completou 20 anos, justamente quando o aguardado disco póstumo do rapper foi lançado.
+                    <br><br> "Na Zona Sul" (Na zona sul cotidiano difícil/ Mantenha o procede, quem não conte tá fudido/ É zona sul maluco cotidiano difícil/ Mantenha o procede, quem não conter tá fudido) explica os anos 1990 para quem não teve a chance
+                    de viver. Do microcosmo da zona sul até o mundo, Sabotage é preciso em seus relatos e é impressionante pensar como parece outro mundo. As duas seguintes, "A Cultura" e "Incentivando o Som", trazem uma mensagem positiva para quem deseja
+                    se unir a eles.
+                    <br><br> Se "Respeito é Pra Quem Tem" conta como as coisas funcionam nas ruas – do tratamento da polícia até como se comportar na frente de outras pessoas, "País da Fome" tem um andamento bem melancólico e diz que a "vida é realidade,
+                    não filme". Chorão (1970-2013) faz uma excelente participação especial no encerramento, a faixa "Cantando Pro Santo". O tom religioso é dos mais interessantes, porque a fé é fundamental para entender a favela – seja qual for. Aliás,
+                    Sabotage e o ex-vocalista do Charlie Brown Jr. fariam uma ótima dupla em um álbum. Uma pena que não rolou a ampliação dessa parceria. <br> Sabotage conseguiu fazer uma obra-prima do rap nacional em sua estreia. As rimas fáceis e as
+                    parcerias precisas fizeram de Rap é Compromisso! um disco fundamental para entender a cena no gênero no início dos anos 2000. E ele mostrou que o rap não é só rima, rap é compromisso.</p>
+
+
+
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Feito por alguém que curte ama rap</p>
+            <div class="social">
+                <a class="fab fa-facebook fa-2x" href="https://www.facebook.com/eltinhooz.silva10/" target="_blank"></a>
+                <a class="fab fa-instagram fa-2x" href="https://www.instagram.com/eltinhooz/" target="_blank"></a>
+                <a class="fab fa-linkedin fa-2x" href="https://www.linkedin.com/in/elton-silva-25b32a1b0/" target="_blank"></a>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
+<script>
+    function entrar() {
+        aguardar();
+        var formulario = new URLSearchParams(new FormData(form_login));
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            body: formulario
+        }).then(resposta => {
+
+            if (resposta.ok) {
+                resposta.json().then(json => {
+
+                    // sessionStorage.login_usuario_meuapp = json.Email;
+                    localStorage.setItem('login', json.Email);
+
+                    if (localStorage.length > 0) {
+                        window.location.href = 'sabotage.html';
+
+                    }
+
+                });
+
+
+
+            } else {
+
+                console.log('Erro de login!');
+
+                finalizar_aguardar();
+            };
+        });
+        // verificar_autenticacao();
+        return false;
+
+    }
+</script>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/backgrounds.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noticia+Text&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/load1.css">
+    <script src="https://kit.fontawesome.com/d91b749ddb.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="funcoes.js"></script>
+    <script type="text/javascript" src="scripts.js"></script>
+</head>
+
+<body onload="teste()">
+    <center>
+        <div class="carregamento" id="loading" style="display: block">
+            <img src="https://media.giphy.com/media/nAWfkuQmFvVy8/giphy.gif" style="width:370px;height:450px;" />
+        </div>
+    </center>
+
+    <div id="conteudo" style="display: none;">
+        <div class="container">
+
+            <h1>Racionais MC'S</h1>
+
+            <a class="fas fa-bars fa-3x bars" onclick="OpenNav()"></a>
+            <a class="fas fa-home fa-3x home" href="Home.html"></a>
+
+        </div>
+
+
+        <!-- Barra de navegação -->
+        <div class="sidebar" id="mysidebar">
+            <span class="far fa-times-circle fa-2x close" onclick="CloseNav()"></span>
+            <div>
+                <a href="javascript: abrir();">Login</a>
+                <a href="cadastro.html">Cadastro</a>
+            </div>
+        </div>
+
+
+        <!-- Login -->
+        <div id="login" class="popup">
+
+            <span class="far fa-times-circle fa-2x close2" onclick="Close()"></span>
+
+
+            <form id="form_login" method="POST" onsubmit="return entrar()">
+                <h1>Entre na Página</h1>
+
+                <label for="email">E-mail</label>
+                <input type="email" name="email" placeholder="seuemail@dominio.com" class="input-padrao"><br>
+
+                <label for="password">Senha</label>
+                <input type="password" name="senha" class="input-padrao">
+
+                <button id="btn_entrar" class="botão">Entrar</button>
+            </form>
+
+
+            <div id="div_erro" style="background-color: sandybrown; color: rgb(255, 0, 0); display: none;">
+
+            </div>
+
+        </div>
+
+        <!-- Página principal do rapper -->
+        <div class="main" id="main">
+
+            <!-- Usuario logado -->
+            <div class="UsuarioLogado" id="logando" style="display: none;">
+                <span> Bem vindo, </span> <b id="b_usuario"></b>
+                <a href="#" onclick="logoff()" style="color:white;" class="fas fa-sign-out-alt"> Sair</a>
+            </div>
+
+            <!-- Notificação Usuario Já está logado -->
+
+            <div class="notificacao-logado" id="notificacao-logado">
+                <div id="notificacao">
+                    <p>Você ja está logado!<br>Nessa página!</p>
+                    <div id="notificacao-icon">
+                        <i class="fas fa-exclamation-circle fa-3x"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Box1">
+                <h1 class="assunto">Biografia</h1>
+                <p class="baixo font">
+                    <b>Racionais MC’s é um grupo brasileiro de rap, fundado em 1988 na periferia da cidade de São Paulo por Mano Brown, Ice Blue, Edi Rock e KL Jay.
+                    <br><br>
+                        Suas letras falam sobre a realidade das periferias urbanas brasileiras, discutindo temas como o crime, pobreza, preconceito social e racial, drogas e consciência política. Usando a linguagem da periferia, com expressões típicas das comunidades pobres com o objetivo de comunicar-se de forma mais eficaz com o público jovem de baixa renda, as letras do grupo fazem um discurso contra a opressão à população marginalizada na periferia e procuram passar uma postura contra a submissão e a miséria.
+                    <br><br>
+                        Apesar de atuar essencialmente na periferia paulistana, de não fazer uso de grandes mídias e se recusar a participar de grandes festivais pelo Brasil, o grupo vendeu durante a carreira mais de 1 milhão em álbuns.
+                    <br> 
+                    o grupo conseguiu alcançar sucesso significativo a partir dos álbuns Raio X Brasil (1993), Sobrevivendo no Inferno (1997) e Nada como um Dia após o Outro Dia (2002).   
+                    <br>  O nome do grupo foi inspirado no disco Racional de Tim Maia.</b></p>
+            </div>
+
+            <div class="BoxRacionais">
+
+                <img src="img/racionais2.png">
+
+            </div>
+
+            <div class="BoxMc3">
+            </div>
+
+            <!-- Player Sound cloud -->
+            <iframe class="player" width="20%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/795484134&color=%23ff0000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+            <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/vitor-milles-376336897" title="vitor milles" target="_blank" style="color: #cccccc; text-decoration: none;">vitor milles</a> · <a href="https://soundcloud.com/vitor-milles-376336897/sets/racionais-mcs-sobrevivendo-no-inferno"
+                    title="racionais mc&#x27;s &quot;sobrevivendo no inferno" target="_blank" style="color: #cccccc; text-decoration: none;">racionais mc&#x27;s &quot;sobrevivendo no inferno</a></div>
+            <div class="Box4">
+                <h1 class="assunto title">Um dos Grupos Mais Importantes para Cena do Rap Nacional</h1>
+                <h2 class="assunto title">30 anos de história e 1 milhão de albúns vendidos</h2>
+
+                <p class="font">O grupo conhecido como Racionais MC's teve em toda sua carreira 12 albúns.
+                    <br>Os álbuns mais emblemáticos, destacam-se “Holocausto Urbano”, primeiro disco oficial do Racionais; “Raio x Brasil”, terceiro disco do grupo, que reúne canções como "Fim de Semana no Parque" e "Homem na Estrada" (ambas de Mano Brown);
+                    “Sobrevivendo no Inferno”, lançado em 1997, que levou o grupo ao topo das paradas de todo o país com "Diário de um Detento", "Fórmula Mágica da Paz", "Capítulo 4, Versículo 3" e "Mágico de Oz"; “Nada Como um Dia Após o Outro Dia”,
+                    disco duplo, lançado em 2002 com sucessos como "Vida Loka I", "Vida Loka II", "Negro Drama", "Jesus Chorou" e "Estilo Cachorro"; “1000 Trutas, 1000 Tretas”, seu primeiro DVD, lançado em 2006 e “Cores & Valores”, para celebrar os 25
+                    anos do grupo, o primeiro com 12 faixas inéditas em mais de uma década.
+                    <br><br> Mais que uma aula de poesia e métrica, “Sobrevivendo no Inferno” é uma aula de história, racismo, violência, direitos e literatura. Mais especificamente, o álbum faz uma crônica da violência, exclusão, discriminação, racismo
+                    e falta de oportunidades à juventude negra.
+                    <br> Lançado em dezembro de 1997, Mano Brown tinha 27 anos e se declarava um sobrevivente no inferno da periferia de São Paulo de um país que sistematicamente extermina sua população negra há séculos, dando voz a muitos outros negros
+                    que sobrevivem na selva urbana, cujo maior vilão é o Estado e o racismo estrutural.
+                    <br><br> Em 1997 o Brasil era então governado pelo presidente Fernando Henrique Cardoso e sua política de privatização de empresas públicas e estatais. Sua política neoliberal andava de mãos dadas com a premissa ideológica da democracia
+                    racial, que buscava afirmar a inexistência do racismo, negando a própria paisagem social que escancarava que a democracia racial ainda não havia chegado para os negros, pois estes ainda são minoria nas profissões mais remuneradas,
+                    nas posições de maior reconhecimento ou melhor renda, principalmente a mulher negra que ainda ocupa uma posição econômica e social extremamente desvantajosa.</p>
+
+                </p>
+                <h2 class="assunto title">Nada Como um dia após o outro dia(2002)</h2>
+                <p class="font">Em uma forma de se desprender do clima pesado e visceral do disco passado, e com melhores condições de produção e gravação, Nada Como um Dia Após o Outro Dia vem em um disco duplo, e cheio de canções que se tornaram os maiores clássicos
+                    relembrados quando o assunto é o grupo. Esse disco reafirma as raízes do grupo, que utiliza samples de vários artistas da época da disco funk e da soul music (de Marvin Gaye à Ray Charles e Al Green), e ao mesmo tempo, com referências
+                    aos companheiros de cena (de Cassiano à Tribunal Popular e 509-E). São poucas as músicas que utilizam-se apenas dos beats e melodias feitos e mixados pelo KL Jay, o DJ do grupo. Mesmo assim, as letras continuam diretas, sendo até hoje
+                    um retrato social do que é o Brasil para as camadas sociais mais baixas. Falando das dificuldades de se viver na favela, de se trabalhar e ganhar dinheiro, e da facilidade de se cair no mundo do crime nessas condições, entregando um
+                    completo descaso governamental que permanece. Os maiores exemplos são Eu Sou 157, Crime Vai e Vem, e Vida Loka Pt. 2. São canções longas, que inevitavelmente contam histórias e relações sociológicas, e que são um prato cheio pra quem
+                    estuda a Sociologia no Brasil à sério. Talvez os defeitos do álbum sejam os fillers e a simplicidade aparente dos beats, mas pra quem conhece Racionais, sabe que a importância ao que é contado por Mano Brown, Ice Blue e Edi Rock fica
+                    por muitas vezes acima disso. Porém, a produção e a sonoridade final são muito melhores do que seu anterior, entregando uma sonoridade mais agradável, mais polida, e querendo ou não, mais rica no uso dos samples e nas suas referências.
+                    Os fillers realmente incomodam, principalmente os que abrem o álbum, porém, eles seguem o conceito que o trabalho apresenta, não sendo simplesmente fillers no sentido literal da palavra, eles tem sua função aqui.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Feito por alguém que curte ama rap</p>
+            <div class="social">
+                <a class="fab fa-facebook fa-2x" href="https://www.facebook.com/eltinhooz.silva10/" target="_blank"></a>
+                <a class="fab fa-instagram fa-2x" href="https://www.instagram.com/eltinhooz/" target="_blank"></a>
+                <a class="fab fa-linkedin fa-2x" href="https://www.linkedin.com/in/elton-silva-25b32a1b0/" target="_blank"></a>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
+<script>
+    function entrar() {
+        aguardar();
+        var formulario = new URLSearchParams(new FormData(form_login));
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            body: formulario
+        }).then(resposta => {
+
+            if (resposta.ok) {
+                resposta.json().then(json => {
+
+                    // sessionStorage.login_usuario_meuapp = json.Email;
+                    localStorage.setItem('login', json.Email);
+
+                    if (localStorage.length > 0) {
+                        window.location.href = 'racionais.html';
+
+                    }
+
+                });
+
+
+
+            } else {
+
+                console.log('Erro de login!');
+
+                finalizar_aguardar();
+            };
+        });
+        // verificar_autenticacao();
+        return false;
+
+    }
+</script>

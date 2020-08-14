@@ -1,0 +1,11 @@
+.carregamento {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../img/grafite2.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.carregamento img {
+    margin-top: 250px;
+}

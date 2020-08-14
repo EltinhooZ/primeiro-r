@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    width: 85%;
+    height: 90%;
+    padding: 30px;
+    padding-bottom: 80px;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+    transition: 0.5s;
+    background-color: white;
+    margin-top: ;
+}

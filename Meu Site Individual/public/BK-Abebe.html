@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BK' --</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/backgrounds.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noticia+Text&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/load1.css">
+    <script src="https://kit.fontawesome.com/d91b749ddb.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="funcoes.js"></script>
+    <script type="text/javascript" src="scripts.js"></script>
+</head>
+
+<body onload="teste()">
+    <!-- Carregamento da página -->
+    <center>
+        <div class="carregamento" id="loading" style="display: block">
+            <img src="https://media.giphy.com/media/nAWfkuQmFvVy8/giphy.gif" style="width:370px;height:450px;" />
+        </div>
+    </center>
+
+    <!-- Header -->
+    <div id="conteudo" style="display: none;">
+        <div class="container">
+
+            <h1>ABEBE BIKILA</h1>
+
+            <a class="fas fa-bars fa-3x bars" onclick="OpenNav()"></a>
+            <a class="fas fa-home fa-3x home" href="Home.html"></a>
+
+        </div>
+
+        <!-- Barra de navegação -->
+        <div class="sidebar" id="mysidebar">
+            <span class="far fa-times-circle fa-2x close" onclick="CloseNav()"></span>
+            <div>
+                <a href="javascript: abrir();">Login</a>
+                <a href="cadastro.html">Cadastro</a>
+            </div>
+        </div>
+
+        <!-- Login  -->
+        <div id="login" class="popup">
+
+            <span class="far fa-times-circle fa-2x close2" onclick="Close()"></span>
+
+
+            <form id="form_login" method="POST" onsubmit="return entrar()">
+                <h1>Entre na Página</h1>
+
+                <label for="email">E-mail</label>
+                <input type="email" name="email" placeholder="seuemail@dominio.com" class="input-padrao"><br>
+
+                <label for="password">Senha</label>
+                <input type="password" name="senha" class="input-padrao">
+
+                <button id="btn_entrar" class="botão">Entrar</button>
+            </form>
+
+
+            <div id="div_erro" style="background-color: sandybrown; color: rgb(255, 0, 0); display: none;">
+
+            </div>
+
+        </div>
+
+        <!-- Página principal rapper -->
+        <div class="main" id="main">
+
+            <!-- Usuario logado -->
+            <div class="UsuarioLogado" id="logando" style="display: none;">
+                <span> Bem vindo, </span> <b id="b_usuario"></b>
+                <a href="#" onclick="logoff()" style="color:white;" class="fas fa-sign-out-alt"> Sair</a>
+            </div>
+
+            <!-- Notificação Usuario Já está logado -->
+
+            <div class="notificacao-logado" id="notificacao-logado">
+                <div id="notificacao">
+                    <p>Você ja está logado<br>Nessa página!</p>
+                    <div id="notificacao-icon">
+                        <i class="fas fa-exclamation-circle fa-3x"></i>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="Box1">
+                <h1 class="assunto">Biografia</h1>
+                <p class="baixo font">
+                    <b>Abebe Bikila Costa Santos, 20 de março de 1989, mais conhecido como BK, é membro do grupo carioca Nectar Gang e também apresenta sólidos trabalhos solo. O rapper, que possui uma carreia anterior como videomaker, já foi considerado uma das grandes promessas da cena do Rap Nacional e cumpriu as expectativas, sendo um dos, senão o maior, destaque de 2016.
+<br>
+                    Em março do referido ano, BK lançou seu álbum solo de estreia, Castelos & Ruínas, alcançando grande aclamação do público e conquistando diversos prêmios no cenário.
+                    Um desses prêmios foi dado pela Red Bull, como o Melhor Álbum Nacional de 2016. No Genius Awards não foi diferente, BK foi o vencedor de todas as categorias nas quais concorreu: música solo do ano e com participação, disco do ano, e por aí vai. O rapper carioca fez barulho até na gringa, uma revista digital de Portugal mencionou o C&R como um dos 5 melhores discos de 2016.
+                    <br>
+                    Entretanto, BK não ficou em voga apenas pelo Castelos e Ruínas, mas por ter feito uma participação icônica em dois dos cyphers mais comentados de 2016, “Poetas no Topo” e “Favela Vive 2”.
+                    <br>
+                    Marechal não exagerou ao dizer, em sua inesperada faixa “Primeiro de Abril”, que BK era o futuro do rap. Seu trabalho como MC o fortaleceu como um dos principais nomes e referência da new school do Rap Nacional. Achou que exageramos? Reclame com BK.</b></p>
+            </div>
+
+            <div class="Box2">
+
+                <img src="img/bk2.png">
+
+            </div>
+
+            <div class="BoxMc1">
+            </div>
+
+            <!-- Player Sound cloud -->
+            <iframe class="player" width="20%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/77799867&color=%23332f32&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+
+
+            <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/abebenectar" title="BK&#x27;" target="_blank" style="color: #cccccc; text-decoration: none;">BK&#x27;</a></div>
+
+            <div class="Box4">
+                <h1 class="assunto title">O Melhor albúm do rap nacional(2016)</h1>
+                <h2 class="assunto title">Castelos & Ruínas</h2>
+
+                <p class="font">BK estreou no cenário do Rap Nacional com o lançamento do álbum Castelos & Ruínas em parceira com o coletivo Pirâmide Perdida Records, uma gravadora independente. O álbum contou com a produção dos beatmakers El Lif e JXNV$, a participação
+                    do rapper Luccas Carlos em duas faixas e com o back-vocal da vocalista Ashira em uma delas. Seu lançamento foi amplamente aclamado no meio Underground, antes de ser endossado pelo MC Marechal, que sinalizou BK como o "futuro do rap",
+                    dando projeção nacional ao cantor. C&R acabou figurando nos debates sobre qual seria o melhor álbum nacional do ano de 2016, vencendo votações populares nos websites da RedBull e Genius. O sucesso e o reconhecimento que o BK recebeu
+                    com seu fenômeno o lançou em outros projetos de destaque no de 2016, como as cyphers Favela Vive e Poetas no Topo , com artistas consagrados do gênero, e o projeto independente de seu coletivo, Pirâmide Perdida, Vol. 7
+                </p>
+
+                <h1 class="assunto title">Segundo albúm(2018)</h1>
+                <h2 class="assunto title">Gigantes</h2>
+
+                <p class="font">Gigantes é o segundo álbum de estúdio solo do artista da Pirâmide Perdida, BK'. Com produções de Arit, El Lif Beatz, JXNV$, NAVE Beatz & Papatinho, as 13 faixas do álbum tratam sobre ascensão, racismo, problemas sociais como violência
+                    e pobreza e o cenário do hip hop nacional. Conta com participações inéditas de KL Jay, Drik Barbosa & Marcelo D2, além da velha parceria com Luccas Carlos—em duas faixas—& Akira Presidente, além de Baco Exu do Blues & Juyè.<br> O álbum
+                    estava sendo anunciado desde 2017, ano em que inclusive o artista lançou dois EPs que prenunciavam o full, intitulados Antes dos Gigantes Chegarem, nos Vol. 1 & Vol. 2.<br> O único que se esperava ser single do disco, “Correria,” acabou
+                    saindo em versão remix, faixa que fecha o trabalho. A música original saiu com videoclipe—dirigido por Calebe Gomes e Ronaldo Land, além da arte de Maxwell Alexandre, responsável também pela arte do álbum.</p>
+
+
+
+
+            </div>
+        </div>
+
+        <div class="footer" id="redesSociais">
+            <p>Feito por alguém que curte ama rap</p>
+            <div class="social">
+                <a class="fab fa-facebook fa-2x" href="https://www.facebook.com/eltinhooz.silva10/" target="_blank"></a>
+                <a class="fab fa-instagram fa-2x" href="https://www.instagram.com/eltinhooz/" target="_blank"></a>
+                <a class="fab fa-linkedin fa-2x" href="https://www.linkedin.com/in/elton-silva-25b32a1b0/" target="_blank"></a>
+            </div>
+
+
+        </div>
+
+
+    </div>
+</body>
+
+</html>
+<script type="text/javascript">
+    function entrar() {
+        aguardar();
+        var formulario = new URLSearchParams(new FormData(form_login));
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            body: formulario
+        }).then(resposta => {
+
+            if (resposta.ok) {
+                resposta.json().then(json => {
+
+                    // sessionStorage.login_usuario_meuapp = json.Email;
+                    localStorage.setItem('login', json.Email);
+
+                    if (localStorage.length > 0) {
+                        window.location.href = 'BK-Abebe.html';
+
+                    }
+
+                });
+
+
+
+            } else {
+
+                console.log('Erro de login!');
+
+                finalizar_aguardar();
+            };
+        });
+        // verificar_autenticacao();
+        return false;
+
+    }
+</script>
